@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100..900&display=swap');
+
+
+:root {
+    /* --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover:#272727; */
+
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover:#272727;
+
+    --font-primaria:"Krona One", sans-serif ;
+    --font-secundaria: "Montserrat", sans-serif;
+}
+
+
+
+*{
+    margin: 0 ;
+    padding: 0;
+}
+
+
+
+
+body {
+    /* height: 100vh;  para  que o site tenha a altura da tela, se for menor do que isso ele vai ficar pequeno */
+    box-sizing:border-box; /* comando para deixar a viewerport configurada para que o elementos filhos
+    não saiam da classe pai */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+padding:2% 0 0 15% ; /* o padding ele pode ter 4 valores para centralizarmos os elmnts : esquerda (x),top(y),baixo(-y) e direito(-x) */
+
+}
+
+.cabecalho_menu {
+    display: flex;
+    gap: 80px;
+}
+
+
+
+.cabecalho_menu_link{
+    font-size: 1.5rem; 
+    font-family: var(--font-secundaria);
+    font-weight:600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+
+
+.apresentacao{
+    padding:5% 15% ;
+    display:flex; /* o padrão para fazer uso do Display Flex */
+    align-items: center;
+    justify-content:space-between;
+    gap: 82px;
+    
+}
+
+.apresentacao_conteudo_imagem {
+width: 50%;
+}
+
+
+.apresentacao_conteudo{
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*espaçamento dos elementos */
+}
+.apresentacao_conteudo_titulo{
+
+    font-size:2.25rem ;
+    font-family:  var(--font-primaria) ;
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+    }
+
+
+.apresentacao_conteudo_texto{
+    font-size: 1.5rem; 
+    font-family: var(--font-secundaria);
+
+}
+
+.apresentacao_link {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* alinha os elementos na orientação correta*/
+    gap: 32px;
+}
+
+.apresentacao_links_subtitulo{
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentacao_links_navegacao  {
+    /* color: #000000;  */
+    /* background-color: #22D4FD; */
+    display: flex; 
+    justify-content: center; /*deixar os objeto no centro */
+    gap: 16px;
+    color:var(--cor-secundaria);
+    width: 50% ;
+    text-align: center;
+    border-radius:8px;  /* raio de arredondamento da borda "do botão no caso */
+    font-size: 1.5rem;
+    padding: 21.5px 0 ; /*primeiro valor no padding (respiro) será no eixo vertical, o segundo valo será no eixo horinzontal */ 
+    text-decoration: none; /*remocao de qualquer  underline que possa estar presente na tag ou estilização */
+    font-family: var(--font-secundaria);
+    font-weight: 600;
+    border: 2px solid var(--cor-terciaria); /*estilo e cor do contorno do botão */
+}
+
+.apresentacao_links_navegacao:hover /*propriedade "hoever" possibilita a interação na passada do mouse */  {   
+background-color: var(--cor-hover);
+ /* padding: 3 %adicionamos para criar uma animacao no botão ao passar o mouse */  
+
+}
+
+.rodape {
+padding: 24px;
+color: var(--cor-primaria);
+background-color: var(--cor-terciaria);
+text-align: center;
+font-family: var(--font-secundaria);
+font-size:1.5rem;
+font-weight: 400;
+}
+
+
+@media (max-width: 1200px) {
+
+    .cabecalho{
+
+        padding:10%;
+    }
+
+    .cabecalho_menu{
+        justify-content: center ;
+        
+        }
+
+    .apresentacao {
+    flex-direction: column-reverse;
+    padding: 5%;}
+
+    .apresentacao_conteudo{
+        width: auto; /*  a propriedade auto ela diz ara a classe se encaixar de forma automatica no padding do pai   */
+
+        /* outra forma de fazer isso é colocando width:100% */
+
+    }  
+
+
+
+
+
+}
